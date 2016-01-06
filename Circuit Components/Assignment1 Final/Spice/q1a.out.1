@@ -1,0 +1,43 @@
+
+**** 11/12/15 15:16:12 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ Question 1 part a
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+*Plot Vsig, Vi, Vo, Io
+
+*Source
+VSigV 1 0 SIN(0 1 10)
+
+*circuit description
+RSigR 2 1 50
+CCap1 3 2 1uF
+RRes1 3 0 100k
+RRes2 3 0 100k
+
+
+GmVi 0 4 3 0 50m
+RResD 4 0 1k
+CCap2 5 4 1uF
+RResL 5 0 10k
+
+
+*analysis request
+.TRAN 1M 1 0 1M
+
+.PLOT TRAN V(1,0) V(6,0)
+.PROBE
+
+.END
+
+ERROR(ORPSIM-15140): Node 6 is undefined
+
+ERROR(ORPSIM-15142): Node 6 is floating
+

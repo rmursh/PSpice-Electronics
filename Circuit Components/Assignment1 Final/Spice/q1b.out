@@ -1,0 +1,84 @@
+
+**** 11/12/15 21:18:57 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ Question 1 part b
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+*Plot Av=V0/Vsig
+
+*Source
+VacSource 1 0 AC 1 0
+
+*circuit description
+RSigR 2 1 50
+CCap1 3 2 1uF
+RRes1 3 0 100k
+RRes2 3 0 100k
+
+
+GmVi 4 0 3 0 50m
+RResD 4 0 10k
+CCap2 5 4 1uF
+RResL 5 0 10k
+
+*request analysis
+.AC DEC 10 10 10MEG
+
+.PROBE
+
+.END
+
+**** 11/12/15 21:18:57 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ Question 1 part b
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)    0.0000  (    2)    0.0000  (    3)    0.0000  (    4)    0.0000      
+
+(    5)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VacSource    0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/12/15 21:18:57 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ Question 1 part b
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

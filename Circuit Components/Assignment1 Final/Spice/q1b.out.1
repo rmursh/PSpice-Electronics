@@ -1,0 +1,39 @@
+
+**** 11/12/15 21:18:10 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ Question 1 part b
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+*Plot Av=V0/Vsig
+
+*Source
+VacSource 1 0 AC 1 0
+
+*circuit description
+RSigR 2 1 50
+CCap1 3 2 1uF
+RRes1 3 0 100k
+RRes2 3 0 100k
+
+
+GmVi 4 0 3 0 50m
+RResD 4 0 10k
+CCap2 5 4 1uF
+RResL 5 0 10k
+
+*request analysis
+.AC DEC 10 0 10MEG
+-----------$
+ERROR(ORPSIM-16103): Invalid value
+
+.PROBE
+
+.END
+

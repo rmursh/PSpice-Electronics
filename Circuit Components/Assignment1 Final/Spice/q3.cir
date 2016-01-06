@@ -1,0 +1,39 @@
+Inverting Amplifier
+**CIRCUIT DESCRIPTION**
+*POWER SUPPLY*
+Vin 5 0 PULSE(-5m 5m 0 10u 10u 0.49m 1m)
+
+*ELEMENTS*
+R1 5 2 10K
+R2 0 1 10K
+R3 2 3 100K
+RL 3 0 1K
+X1 1 2 3 OPAMP
+
+**ANALYSIS REQUUEST**
+.TRAN 1u 5m 0 1u
+
+**OUTPUT REQUEST**
+.PLOT TRAN V(1,0), V(5,0)
+.PROBE
+
+
+*             non-inverting input
+*             | inverting input
+*             | | output
+*             | | |
+.SUBCKT OPAMP 1 2 3
+
+
+*CIRCUIT DESCRIPTION
+
+*SOURCE
+EV3 4 0 1 2 10K
+Rin 1 2 1MEG
+Rout 4 3 50
+
+
+.ENDS OPAMP
+
+
+.END
